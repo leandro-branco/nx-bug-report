@@ -1,22 +1,22 @@
 {
-  "name": "nx-fail-e2e",
+  "name": "angular-app-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nx-fail-e2e/src",
+  "sourceRoot": "apps/angular-app-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/nx-fail-e2e/cypress.config.ts",
-        "devServerTarget": "nx-fail:serve:development",
+        "cypressConfig": "apps/angular-app-e2e/cypress.config.ts",
+        "devServerTarget": "angular-app:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "nx-fail:serve:production"
+          "devServerTarget": "angular-app:serve:production"
         },
         "ci": {
-          "devServerTarget": "nx-fail:serve-static"
+          "devServerTarget": "angular-app:serve-static"
         }
       }
     },
@@ -24,10 +24,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nx-fail-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/angular-app-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["nx-fail"]
+  "implicitDependencies": ["angular-app"]
 }

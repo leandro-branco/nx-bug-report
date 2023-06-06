@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "nx-fail",
+            "prefix": "nxf",
             "style": "kebab-case"
           }
         ]
